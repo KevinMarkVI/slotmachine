@@ -20,9 +20,9 @@ $(function(){
   };
 
   var startSpin = function() {
-    slot1 = setInterval(function() {changeImage('#slot1', './images/coffeemaker.jpg', './images/teapot.jpg', './images/espressomachine.jpg');}, 100);
-    slot2 = setInterval(function() {changeImage('#slot2', './images/teastrainer.jpg', './images/coffeefilter.jpg', './images/espressotamper.jpg');}, 100);
-    slot3 = setInterval(function() {changeImage('#slot3', './images/coffeegrounds.jpg', './images/looseleaftea.jpg', './images/groundespresso.jpg');}, 100);
+    slot1 = setInterval(function() {changeImage('#slot1', './images/coffeemaker.jpg', './images/teapot.jpg', './images/espressomachine.jpg');}, 175);
+    slot2 = setInterval(function() {changeImage('#slot2', './images/teastrainer.jpg', './images/coffeefilter.jpg', './images/espressotamper.jpg');}, 150);
+    slot3 = setInterval(function() {changeImage('#slot3', './images/coffeegrounds.jpg', './images/looseleaftea.jpg', './images/groundespresso.jpg');}, 125);
     setTimeout(stopSpin, 2000);
   };
 
