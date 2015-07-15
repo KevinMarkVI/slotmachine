@@ -7,25 +7,18 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
-    <script src="app.js"></script>
+    <script src="slotMachine.js"></script>
+    <script src="slotController.js"></script>
   </head>
 
   <body>
     <h1>Hot Beverage Slot Machine!</h1>
 
-    <div>
-      <img id="slot1" src="./images/espressomachine.jpg" height="200px">
-    </div>
-
-    <div>
-      <img id="slot2" src="./images/teastrainer.jpg" height="200px">
-    </div>
-
-    <div>
-      <img id="slot3" src="./images/looseleaftea.jpg" height="200px">
-    </div>
+    <div id="machine"></div>
 
     <button type="submit">Spin!</button>
+
+    <div id="resultsdisplay"></div>
 
   </body>
 

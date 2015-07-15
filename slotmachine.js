@@ -1,30 +1,32 @@
-var SlotMachine = function(el) {
+SlotMachineType = {
+  'coffee': 1,
+
+};
+var SlotMachine = function() {
   this.slot1 = [1,2,3];
   this.slot2 = [4,5,6];
   this.slot3 = [7,8,9];
-  this.el = el;
 };
 
 
+SlotMachine.prototype.spin = function() {
+  var result = [this.slot1[slotIndex()], this.slot2[slotIndex()], this.slot3[slotIndex()]];
+  return result;
+};
 
-SlotMachine.prototype.play = function() {
-  var spinMachine = spin(this.slot1, this.slot2, this.slot3);
-  var selections = spinMachine.join();
-  if (selections === '1,4,7') {
-    console.log("YOU WIN COFFEE!!!");
-  } else if (selections === '2,5,8') {
-    console.log("YOU WIN TEA!!!");
-  } else if (selections === '3,6,9') {
-    console.log("YOU WIN ESPRESSO!!!");
+
+SlotMachine.prototype.isWinner = function(arr) {
+  if (arr[0] === 1 && arr[1] === 4 && arr[2] === 7) {
+    return SlotMachineType.coffee;
+  } else if (arr[0] === 2 && arr[1] === 5 && arr[2] === 8) {
+    return 2;
+  } else if (arr[0] === 3 && arr[1] === 6 && arr[2] === 9) {
+    return 3;
   } else {
-    console.log("YOU LOSE!!! TRY AGAIN!");
+    return false;
   }
 };
 
-var spin = function(arr1, arr2, arr3)  { 
-  var results = [arr1[slotIndex()], arr2[slotIndex()], arr3[slotIndex()]];
-  return results;
-};
 
 var slotIndex = function() {
   var rand = Math.random(); 
@@ -37,35 +39,22 @@ var slotIndex = function() {
   }
 };
 
-var slots = {
-  '1': './images/coffeemaker.jpg',
-  '2': './images/teapot.jpg',
-  '3': './images/espressomachine.jpg',
-  '4': './images/coffeefilter.jpg',
-  '5': './images/teastrainer.jpg',
-  '6': './images/espressotamper.jpg',
-  '7': './images/coffeegrounds.jpg',
-  '8': './images/looseleaftea.jpg',
-  '9': './images/groundespresso.jpg'
-};
-
-$(function() {
-  $('button').click(function() {
-    console.log("BUTTON WORKS");
-  });
-  loadImages('#machine');
-});
 
 
-var loadImages = function(target, pathArr) {
-  pathArr = pathArr || [slots['1'], slots['5'], slots['9']];
-  for (var i = 0; i < pathArr.length; i++){
-    $('<img id="slot'+ i +'" src="'+ pathArr[i] +'">').load(function() {
-      $(this).appendTo(target);
-    });
-  }
-};
 
 
+
+// new SlotMachine().spin() => [0, 2, 2];
+// SlotMachine.is_winner()
+
+
+// SlotController
+//   => start_spin
+//     result = new SlotMachine.spin();
+//     // Start the ui spinning
+//     // Schedule stopping the ui spinning
+//     // Scheduling updating with images that map to result
+//   => stop_spin
+//   => load_images
 
 
