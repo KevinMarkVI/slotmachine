@@ -24,6 +24,7 @@ var slots = {
   9: './images/groundespresso.jpg'
 };
 
+
 var SlotMachine = function() {
   this.slot1 = [1,2,3];
   this.slot2 = [4,5,6];
