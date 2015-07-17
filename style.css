@@ -1,24 +1,108 @@
-img {
-  border: 4px solid black;
-  padding: 10px;
+.staticImage1, .staticImage2, .staticImage3 {
+  border: 1px solid #000;
+  margin: 5px;
+  float: left;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0px 0px 4px grey;
+  border-radius: 5px;
+}
+
+.animation {
+  position: relative;
   width: 200px;
   margin: 5px;
+  float: left;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: white;
 }
 
-h1 {
-  margin-bottom: 50px;
+.animation img {
+  position: absolute;
+  left: 0;
+  animation-timing-function: linear;
+
+}
+.anim1 {
+  top: -200px;
+  animation: slide1 0.5s infinite;
 }
 
-h2 {
+@-webkit-keyframes slide1 {
+  100% { top: 400px; }
+}
+
+.anim2 {
+  top: -400px;
+  animation: slide2 0.5s infinite;
+}
+
+@-webkit-keyframes slide2 {
+  100% { top: 200px; }
+}
+
+.anim3 {
+  top: -600px;
+  animation: slide3 0.5s infinite;
+}
+
+@-webkit-keyframes slide3 {
+  100% { top: 0px; }
+}
+
+.anim3 {
+  top: -600px;
+  animation: slide3 0.5s infinite;
+}
+
+@-webkit-keyframes slide3 {
+  100% { top: 0px; }
+}
+.anim4 {
+  top: 0px;
+  animation: slide4 0.5s infinite;
+}
+
+@-webkit-keyframes slide4 {
+  100% { top: 800px; }
+}
+
+.machineContainer {
+  border: 10px solid black;
+  height: 366px;
+  border-radius: 10px;
+  background-color: #6B96B2;
+  width: 750px;
+  margin: 0 auto;
 }
 
 button {
-  width: 150px;
-  height: 30px;
-  font-size: 20px;
-  margin-top: 50px;
+  width: 200px;
+  height: 50px;
+  font-size: 150%;
+  border-radius: 5px;
+  background: #cccccc;
 }
 
-#slot0 {
+p {
+  clear: both;
+}
 
+body {
+  text-align: center;
+}
+
+#slotContainer {
+  width: 636px;
+  height: 212px; 
+  margin: 0 auto;
+}
+
+.resultsContainer {
+  border: 3px solid black;
+  background-color: ;
+  border-radius: 10px;
 }

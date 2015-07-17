@@ -4,20 +4,52 @@
 
   <head>
     <title>Hot Beverage Slot Machine!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
     <script src="slotMachine.js"></script>
     <script src="slotController.js"></script>
     <script src="slotMachineTests.js"></script>
   </head>
 
   <body>
-    <h1>Hot Beverage Slot Machine!</h1>
-    <div id="machine"></div>
-    <button type="submit">Spin!</button>
-    <span id="resultsDisplay"></span>
+    <div class="machineContainer">
 
+      <h1>Hot Beverage Slot Machine!</h1>
+
+      <div id="slotContainer">
+
+        <img src="./images/coffeemaker.jpg" class="staticImage1"/>
+        <img src="./images/coffeefilter.jpg" class="staticImage2"/>
+        <img src="./images/coffeegrounds.jpg" class="staticImage3"/>
+
+        <div class="animation" id="animFrame1">
+          <img src="./images/coffeemaker.jpg" class="anim3"/>
+          <img src="./images/teapot.jpg" class="anim2"/>
+          <img src="./images/espressomachine.jpg" class="anim1"/>
+          <img src="./images/coffeemaker.jpg" class="anim4"/>
+        </div>
+
+        <div class="animation" id="animFrame2">
+          <img src="./images/coffeefilter.jpg" class="anim3"/>
+          <img src="./images/teastrainer.jpg" class="anim2"/>
+          <img src="./images/espressotamper.jpg" class="anim1"/>
+          <img src="./images/coffeefilter.jpg" class="anim4"/>
+        </div>
+
+        <div class="animation" id="animFrame3">
+          <img src="./images/coffeegrounds.jpg" class="anim3"/>
+          <img src="./images/looseleaftea.jpg" class="anim2"/>
+          <img src="./images/groundespresso.jpg" class="anim1"/>
+          <img src="./images/coffeegrounds.jpg" class="anim4"/>
+        </div>
+
+      </div>
+      <p>
+        <button type="submit">Spin!</button>
+      </p>
+      <div id="resultsDisplay"></div>
+    </div>
+    
   </body>
 
 
